@@ -1,18 +1,31 @@
+:root {
+    /* barvy */
+    --primary: #B2945B;
+    --primary-dark: #453921;
+    --cream: #eaf4b9;
+    --thin: 0.5em;
+    --medium: 1em;
+    --thick: 1.5em;
+}
+
+/* stylovani prvku */
 body {
     width: 80%;
-    background-color: #eaf4b9;
+    background-color: var(--cream);
     margin: auto;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--primary-dark)
 }
 
 body,
 input {
     font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 nav {
-    background-color: #d9d9bf;
     width: 100%;
+    background-color: var(--cream);
 }
 
 nav>ul {
@@ -39,17 +52,40 @@ th {
     padding: 0.25em;
 }
 
+button {
+    padding: 0, 1em;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
 form input[type="checkbox"],
 form input[type="radio"] {
     display: inline;
 }
-form label{
+
+textarea {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     display: block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.intro {
-    display: flex;
-    flex-direction: row;
+input {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* tridy */
+
+.intro-text {
+    flex-grow: 2;
 }
 
 .apollo {
@@ -67,16 +103,14 @@ form label{
     display: block;
 }
 
-button {
-    /* border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px; */
-    padding: 0, 1em;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
+.pawprint {
+    width: 25%;
+    height: 25%;
+    transform: rotate(325deg);
+}
+
+.signature {
+    width: 65%;
 }
 
 .icons {
@@ -86,42 +120,107 @@ button {
     justify-content: space-between;
 }
 
-.button-pill {
-    padding: 0, 5em;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+/* budouci framework */
+.form-item {
+    display: block;
+    justify-content: space-between;
 }
 
-.button-rounded {
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
     padding: 0.2em 0.5em;
+}
+
+.button-pill {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.button-sharp {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.button-primary {
+    background-color: var(--primary);
+}
+
+.corners-rounded {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
-.margin-small {
-    margin: 0.5em;
+.margin-none {
+    margin: 0em
 }
 
-.margin-horizontal-small {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+.margin-horizontal-none {
+    margin-left: 0em;
+    margin-right: 0em;
 }
 
-.margin-vertical-small {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+.margin-vertical-none {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.margin-top-none {
+    margin-top: 0em;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0em;
+}
+
+.margin-thin {
+    margin: var(--thin)
+}
+
+.margin-horizontal-thin {
+    margin-left: var(--thin);
+    margin-right: var(--thin);
+}
+
+.margin-right-thin {
+    margin-right: var(--thin);
+}
+
+.margin-left-thin {
+    margin-left: var(--thin);
+}
+
+.margin-vertical-thin {
+    margin-top: var(--thin);
+    margin-bottom: var(--thin);
 }
 
 .margin-medium {
-    margin: 1em;
+    margin: var(--medium);
 }
 
-.intro-text {
-    flex-grow: 2;
+.padding-vertical-thin {
+    padding-top: var(--thin);
+    padding-bottom: var(--thin);
+}
+
+.padding-vertical-medium {
+    padding-top: var(--medium);
+    padding-bottom: var(--medium);
+}
+
+.padding-vertical-thick {
+    padding-top: var(--thick);
+    padding-bottom: var(--thick);
 }
 
 .nav-sticky-top {
@@ -129,9 +228,26 @@ button {
     top: 0;
 }
 
+.border-primary-dark {
+    border-color: var(--primary-dark);
+}
+
+.border-thin{
+    border-width: 0.05em;
+}
+
+.border-medium{
+    border-width: 0.1em;
+}
+
+.border-thick{
+    border-width: 0.15em;
+}
+
 nav>ul>li>a {
     text-decoration: none;
     font-size: 24px;
     text-wrap: wrap;
     padding: 0.2em;
+    color: var(--primary-dark);
 }
