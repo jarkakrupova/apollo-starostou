@@ -2,44 +2,136 @@ body {
     width: 80%;
     background-color: #eaf4b9;
     margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-nav{
-    position: sticky;
-    top:0;
+
+body,
+input {
+    font-size: 20px;
+}
+
+nav {
     background-color: #d9d9bf;
-    display: flex;
-    flex-direction: row;
+    width: 100%;
 }
 
 nav>ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.apollo {
-    height: 15%;
-    width: 15%;
-    display: inline;
+blockquote {
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-body,input{
-        font-size: 20px;
-}
-table{
+
+table {
     table-layout: auto;
-
 }
-table, td, th{
+
+table,
+td,
+th {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 0.25em;
 }
-.intro{
+
+form input[type="checkbox"],
+form input[type="radio"] {
     display: inline;
-    width: 50%;
 }
-blockquote{
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+form label{
+    display: block;
 }
-.banner{
-    width: inherit;
+
+.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.apollo {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    flex-direction: row;
+}
+
+.banner {
+    width: 100%;
+}
+
+.message {
+    display: block;
+}
+
+button {
+    /* border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; */
+    padding: 0, 1em;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+}
+
+.button-pill {
+    padding: 0, 5em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.button-rounded {
+    padding: 0.2em 0.5em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.margin-small {
+    margin: 0.5em;
+}
+
+.margin-horizontal-small {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.margin-vertical-small {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.margin-medium {
+    margin: 1em;
+}
+
+.intro-text {
+    flex-grow: 2;
+}
+
+.nav-sticky-top {
+    position: sticky;
+    top: 0;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    font-size: 24px;
+    text-wrap: wrap;
+    padding: 0.2em;
 }

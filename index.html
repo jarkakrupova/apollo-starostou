@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo I., kandidát na starostu</title>
+    <title>Apollo, kandidát na starostu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <header>
-  
+
 </header>
 
 <body>
-    <img class="banner" src="banner.png" alt="volební banner">
-      <nav>
+    <img class="banner" src="banner2.png" alt="volební banner">
+    <nav class="nav-sticky-top">
         <ul>
             <li><a href="#about">O mně</a></li>
             <li><a href="#program">Volební program</a></li>
@@ -22,12 +22,18 @@
         </ul>
     </nav>
     <h1>Apollo I.</h1>
-    <div>
-            <p class="intro">Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na starostu města v komunálních volbách ve dnech 9. - 10. října 2026.</p>
+    <div class="intro">
+        <div class="intro-text">
+            <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na starostu
+                města v komunálních volbách ve dnech 9. - 10. října 2026.</p>
             <p>Budu velmi potěšen, pokud mi dáte svůj hlas.</p>
+            <p>Packu na to!</p>
             <p>Váš</p>
-            <p class="signature">Apollo</p>
+            <p>Apollo</p>
+        </div>
+        <div>
             <img class="apollo" src="apollo.JPEG" alt="Apollo, pes kandidující na starostu">
+        </div>
     </div>
 
     <blockquote>
@@ -36,12 +42,12 @@
     <div id="about">
         <h2>O mně</h2>
         <p>Jsem občanem tohoto města již přes rok a chystám se to tady dát do pořádku.</p>
-        <p>Jsem typickým představitelem psa z malého města.</p>
+        <p>Jsem typickým představitelem psa z malého města a chystám se být starostou všech zvířat i lidí.</p>
     </div>
     <div id="program">
         <h2>Volební program</h2>
         <ol>
-            <li>Podpora drobného podnikání ve městě, zejména řeznictví a zverimexů</li>
+            <li>Podpora drobného podnikání ve městě, zejména řeznictví, zverimexů a zvířecích salonů</li>
             <li>Instalace psích pisoárů na nároží (i domácí mazlíček si může ulevovat kulturně)</li>
             <li>Sáčky sráčky zdarma každému pejskaři (v možství větším než dosud)</li>
             <li>Psí hřiště ve všech městských částech</li>
@@ -75,8 +81,18 @@
                 <td>6:00-6:15</td>
                 <td>u rehabilitačního centra (ul. Hluboká)</td>
             </tr>
+            <tr>
+                <td>Čtvrtek</td>
+                <td>16:45-17:00</td>
+                <td>u kulturního domu</td>
+            </tr>
+            <tr>
+                <td>Pátek</td>
+                <td>18:45-19:00</td>
+                <td>louka u transformátoru</td>
+            </tr>
         </table>
-        <fieldset>
+        <fieldset class="margin-vertical-small">
             <legend>Rezervace konzultace</legend>
             <form action="" method="post">
                 <label for="firstname">Vaše jméno:</label>
@@ -87,7 +103,7 @@
                 <input type="time" name="time" id="time">
                 <label for="topics">Nástin probíraných témat:</label>
                 <textarea name="topics" id="topics" cols="20" rows="3"></textarea>
-                <input type="submit" value="Rezervuj">
+                <input type="submit" class="button-rounded" value="Rezervuj">
             </form>
         </fieldset>
     </div>
@@ -113,15 +129,26 @@
                     <input type="checkbox" name="priorities" id="cages"><label>Výběhy pro hlodavce</label>
                 </div>
             </div>
-            <label for="message">Co byste mi chtěli vzkázat?</label>
-            <textarea name="message" id="message" cols="60" rows="20"></textarea>
-            <input type="submit" value="Odešli">
+            <div class="message">
+                <label for="message">Co byste mi chtěli vzkázat?</label>
+                <textarea name="message" id="message" cols="60" rows="20"></textarea>
+                <input type="submit" class="button-rounded" value="Odešli">
+            </div>
         </form>
     </fieldset>
+    <div class="icons margin-small">
+        <img src="icons/bird.png" alt="pták">
+        <img src="icons/bone.png" alt="kost">
+        <img src="icons/cat.png" alt="kočka">
+        <img src="icons/fish.png" alt="rybička">
+        <img src="icons/rabbit.png" alt="králík">
+        <img src="icons/snake.png" alt="had">
+    </div>
 </body>
 <hr>
 <footer>
-    &copy; Apollo I., z Boží vůle král, a nafurt + jeho služebnictvo, 2026
+    &copy; Apollo I., z Boží vůle král, a nafurt + jeho služebnictvo, 2026 
+    Ikony: &copy;<a href="www.flaticon.com">Flaticon</a> 
 </footer>
 
 </html>
