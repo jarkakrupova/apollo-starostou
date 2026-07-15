@@ -1,31 +1,51 @@
 :root {
     /* barvy */
-    --primary: #B2945B;
-    --primary-dark: #453921;
+    --primary-lightest: var(--soft-linen);
+    --primary-light: var(--pale-oak);
+    --primary: var(--camel);
+    --primary-dark: var(--olive-wood);
+    --primary-darkest: var(--dark-khaki);
+    --soft-linen:#F2EDE3;
+    --pale-oak:#D8C8AC;
+    --camel: #B2945B;
+    --olive-wood: #7D663B;
+    --dark-khaki:#453921;
     --cream: #eaf4b9;
-    --thin: 0.5em;
-    --medium: 1em;
-    --thick: 1.5em;
+    
+    /* tloušťky paddingu a marginu */
+    --padding-margin-thin: 0.5em;
+    --padding-margin-medium: 1em;
+    --padding-margin-thick: 1.5em;
+    /* tloušťky čar */
+    --border-thin: 0.05em;
+    /* font */
+    --default-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* smallest-smaller-medium-larger-largest */
+/* lightest-light-primary-dark-darkest */
 
 /* stylovani prvku */
 body {
     width: 80%;
-    background-color: var(--cream);
+    background-color: var(--primary-lightest);
     margin: auto;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: var(--primary-dark)
+    font-family: var(--default-font-family);
 }
 
 body,
-input {
+input,
+textarea {
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: var(--default-font-family);
 }
+::selection {
+    color: var(--primary-lightest); 
+    background-color: var(--primary-dark);}
 
 nav {
     width: 100%;
-    background-color: var(--cream);
+    background-color: var(--primary-lightest);
 }
 
 nav>ul {
@@ -82,6 +102,22 @@ input {
     border-top-right-radius: 5px;
 }
 
+nav>ul>li>a {
+    text-decoration: none;
+    font-size: 24px;
+    text-wrap: wrap;
+    padding: 0.2em;
+    color: var(--primary-darkest);
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
 /* tridy */
 
 .intro-text {
@@ -104,8 +140,8 @@ input {
 }
 
 .pawprint {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
     transform: rotate(325deg);
 }
 
@@ -121,9 +157,13 @@ input {
 }
 
 /* budouci framework */
+input[type="checkbox"]:checked{
+background-color: var(--primary-light);
+}
+
 .form-item {
     display: block;
-    justify-content: space-between;
+    width: 100%;
 }
 
 .flex-row {
@@ -149,9 +189,32 @@ input {
     border-top-right-radius: 0px;
 }
 
-.button-primary {
-    background-color: var(--primary);
+.button-primary-darkest {
+    background-color: var(--primary-darkest);
+    color: var(--primary-lightest);
 }
+.button-primary-dark {
+    background-color: var(--primary-dark);
+    color: var(--primary-lightest);
+}
+
+.button-primary-light {
+    background-color: var(--primary-light);
+    color: var(--primary-lightest);
+}
+
+/* buttony - animace */
+.button:hover {
+    box-shadow: 4px 4px #1c170d;
+}
+
+.button:active {
+    box-shadow: none;
+    top: 6px;
+}
+
+
+/* rohy */
 
 .corners-rounded {
     border-bottom-left-radius: 10px;
@@ -159,6 +222,8 @@ input {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+/* margins */
 
 .margin-none {
     margin: 0em
@@ -183,44 +248,52 @@ input {
 }
 
 .margin-thin {
-    margin: var(--thin)
+    margin: var(--padding-margin-thin)
 }
 
 .margin-horizontal-thin {
-    margin-left: var(--thin);
-    margin-right: var(--thin);
+    margin-left: var(--padding-margin-thin);
+    margin-right: var(--padding-margin-thin);
 }
 
 .margin-right-thin {
-    margin-right: var(--thin);
+    margin-right: var(--padding-margin-thin);
 }
 
 .margin-left-thin {
-    margin-left: var(--thin);
+    margin-left: var(--padding-margin-thin);
+}
+
+.margin-top-thin {
+    margin-top: var(--padding-margin-thin);
+}
+
+.margin-bottom-thin {
+    margin-bottom: var(--padding-margin-thin);
 }
 
 .margin-vertical-thin {
-    margin-top: var(--thin);
-    margin-bottom: var(--thin);
+    margin-top: var(--padding-margin-thin);
+    margin-bottom: var(--padding-margin-thin);
 }
 
 .margin-medium {
-    margin: var(--medium);
+    margin: var(--padding-margin-medium);
 }
 
 .padding-vertical-thin {
-    padding-top: var(--thin);
-    padding-bottom: var(--thin);
+    padding-top: var(--padding-margin-thin);
+    padding-bottom: var(--padding-margin-thin);
 }
 
 .padding-vertical-medium {
-    padding-top: var(--medium);
-    padding-bottom: var(--medium);
+    padding-top: var(--padding-margin-medium);
+    padding-bottom: var(--padding-margin-medium);
 }
 
 .padding-vertical-thick {
-    padding-top: var(--thick);
-    padding-bottom: var(--thick);
+    padding-top: var(--padding-margin-thick);
+    padding-bottom: var(--padding-margin-thick);
 }
 
 .nav-sticky-top {
@@ -228,26 +301,76 @@ input {
     top: 0;
 }
 
-.border-primary-dark {
-    border-color: var(--primary-dark);
+/* tabulka s prouzky */
+
+.table-striped-primary tr:nth-child(even){
+    background-color: var(--primary-light);
 }
 
-.border-thin{
-    border-width: 0.05em;
+/* okraje */
+
+.border-primary-darkest {
+    border-color: var(--primary-darkest);
 }
 
-.border-medium{
+.border-none {
+    border-width: 0px;
+}
+
+.border-thin {
+    border-width: var(--border-thin);
+}
+
+.border-bottom-thin {
+    border-bottom-width: var(--border-thin);
+}
+
+.border-medium {
     border-width: 0.1em;
 }
 
-.border-thick{
+.border-thick {
     border-width: 0.15em;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    font-size: 24px;
-    text-wrap: wrap;
-    padding: 0.2em;
-    color: var(--primary-dark);
+/* sloupce  */
+.columns-2 {
+    column-count: 2;
 }
+
+.columns-3 {
+    column-count: 3;
+}
+
+.columns-4 {
+    column-count: 4;
+}
+
+/* animace */
+.zoom-hover-small:hover {
+    transform: scale(1.25, 1.25);
+    transition-duration: 0.3s;
+}
+.zoom-hover-small:not(:hover) {
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+}
+
+.zoom-hover-medium:hover {
+    transform: scale(1.5, 1.5);
+    transition-duration: 0.3s;
+}
+.zoom-hover-medium:not(:hover) {
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+}
+
+.zoom-hover-large:hover {
+    transform: scale(2, 2);
+    transition-duration: 0.3s;
+}
+.zoom-hover-large:not(:hover) {
+    transform: scale(1, 1);
+    transition-duration: 0.3s;
+}
+

@@ -13,8 +13,8 @@
 
 <body>
     <img class="banner" src="banner2.png" alt="volební banner">
-    <nav class="nav-sticky-top padding-vertical-medium">
-        <ul>
+    <nav class="nav-sticky-top padding-vertical-medium k">
+        <ul class="border-bottom-thin border-primary-dark">
             <li><a href="#about">O mně</a></li>
             <li><a href="#program">Volební program</a></li>
             <li><a href="#consultation">Konzultační hodiny + rezervace</a></li>
@@ -25,10 +25,10 @@
     <div class="flex-row">
         <div class="margin-right-thin">
             <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na starostu města v
-                komunálních volbách ve dnech 9. - 10. října 2026. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda nevyužít.</p>
-                <p class="margin-bottom-none">Budu velmi potěšen, pokud mi dáte svůj hlas.</p>
+                komunálních volbách ve dnech 9. - 10. října 2026. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda nechávat ležet ladem. V případě svého zvolení slibuji, že se to u nás začne hýbat.</p>
                 <div class="flex-row">
                     <div class="signature">
+                    <p>Budu velmi potěšen, pokud mi dáte svůj hlas.</p>
                     <p>Packu na to!</p>
                     <p>Váš</p>
                     <p>Apollo</p>
@@ -46,7 +46,10 @@
     </blockquote>
     <div id="about">
         <h2>O mně</h2>
-        <p>Jsem typickým představitelem psa z malého města a chystám se být starostou všech zvířat i lidí. Občanem tohoto města jsem se stal již více než před rokem a při venčení využívám svůj fenomenální sluch k naslouchání zvířatům i jejich páníčkům. Všechny připomínky pečlivě zvažuji a chystám se to tady dát do pořádku. </p>
+        <p>Jsem typickým představitelem psa z malého města a chystám se být starostou všech zvířat i lidí. Občanem
+            tohoto města jsem se stal již více než před rokem a při venčení využívám svůj fenomenální sluch k
+            naslouchání zvířatům i jejich páníčkům. Všechny připomínky pečlivě zvažuji a chystám se to tady dát do
+            pořádku. </p>
     </div>
     <div id="program">
         <h2>Volební program</h2>
@@ -62,66 +65,79 @@
             <li>Osévání trávníků rostlinami vhodnými pro domácí mazlíčky</li>
         </ol>
     </div>
+    
     <div id="consultation">
         <h2>Konzultační hodiny</h2>
-        <table>
-            <tr>
-                <th>den</th>
-                <th>hodina</th>
-                <th>místo</th>
-            </tr>
-            <tr>
-                <td>Pondělí</td>
-                <td>6:00-6:15</td>
-                <td>okolí zámku</td>
-            </tr>
-            <tr>
-                <td>Úterý</td>
-                <td>6:00-6:15</td>
-                <td>dvůr pošty</td>
-            </tr>
-            <tr>
-                <td>Středa</td>
-                <td>6:00-6:15</td>
-                <td>u rehabilitačního centra (ul. Hluboká)</td>
-            </tr>
-            <tr>
-                <td>Čtvrtek</td>
-                <td>16:45-17:00</td>
-                <td>u kulturního domu</td>
-            </tr>
-            <tr>
-                <td>Pátek</td>
-                <td>18:45-19:00</td>
-                <td>louka u transformátoru</td>
-            </tr>
-        </table>
-        <fieldset class="margin-vertical-thin border-primary-dark corners-rounded border-thin">
-            <legend>Rezervace konzultace</legend>
-            <form action="" method="post">
-                <div class="form-item">
-                    <label for="firstname">Vaše jméno:</label>
-                    <input type="text" name="firstname" id="firstname">
-                </div>
-                <div class="form-item">
-                    <label for="date">Datum:</label>
-                    <input type="date" name="date" id="date">
-                </div>
-                <div class="form-item">
-                    <label for="time">Čas:</label>
-                    <input type="time" name="time" id="time">
-                </div>
-                <label for="topics">Nástin probíraných témat:</label>
-                <textarea name="topics" id="topics" cols="20" rows="3"></textarea>
-                <input type="submit" class="button" value="Rezervuj">
-            </form>
-        </fieldset>
+        <div class="columns-2">
+            <table class="margin-top-thin table-striped-primary">
+                <tr>
+                    <th>den</th>
+                    <th>hodina</th>
+                    <th>místo</th>
+                </tr>
+                <tr>
+                    <td>Pondělí</td>
+                    <td>6:00-6:15</td>
+                    <td>okolí zámku</td>
+                </tr>
+                <tr>
+                    <td>Úterý</td>
+                    <td>6:00-6:15</td>
+                    <td>dvůr pošty</td>
+                </tr>
+                <tr>
+                    <td>Středa</td>
+                    <td>6:00-6:15</td>
+                    <td>u rehabilitačního centra (ul. Hluboká)</td>
+                </tr>
+                <tr>
+                    <td>Čtvrtek</td>
+                    <td>16:45-17:00</td>
+                    <td>u kulturního domu</td>
+                </tr>
+                <tr>
+                    <td>Pátek</td>
+                    <td>18:45-19:00</td>
+                    <td>louka u transformátoru</td>
+                </tr>
+                                <tr>
+                    <td>Sobota</td>
+                    <td>8:00-8:15</td>
+                    <td>park u zámku</td>
+                </tr>
+                                <tr>
+                    <td>Neděle</td>
+                    <td>17:00-17:15</td>
+                    <td>park u kulturního domu</td>
+                </tr>
+            </table>
+            <fieldset class="margin-vertical-thin border-primary-dark corners-rounded  border-none">
+                <legend>Rezervace konzultace</legend>
+                <form action="" method="post">
+                    <div class="form-item margin-vertical-thin">
+                        <label for="firstname">Vaše jméno:</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </div>
+                    <div class="form-item margin-vertical-thin">
+                        <label for="date">Datum:</label>
+                        <input type="date" name="date" id="date">
+                    </div>
+                    <div class="form-item margin-vertical-thin">
+                        <label for="time">Čas:</label>
+                        <input type="time" name="time" id="time">
+                    </div>
+                    <label for="topics">Nástin probíraných témat:</label>
+                    <textarea name="topics" id="topics" cols="20" rows="3"></textarea>
+                    <input type="submit" class="button button-primary-dark" value="Rezervuj">
+                </form>
+            </fieldset>
+        </div>
     </div>
     <fieldset class="border-primary-dark corners-rounded border-thin">
         <legend>Dotazník pro návštěvníky</legend>
         <form action="" method="post">
             <div id="questionnaire">
-                <div class="form-item">
+                <div class="form-item margin-vertical-thin">
                     <label for="animals">Jste: </label>
                     <select name="animals">
                         <option value="dog" selected>pes</option>
@@ -133,7 +149,7 @@
                 </div>
                 <input type="radio" name="elections" id="yes"><label>Chystám se k volbám</label>
                 <input type="radio" name="elections" id="yes"><label>Nechystám se k volbám</label>
-                <div>Za prioritu ve měste považuji: (zaškrtněte více možností)
+                <div class="margin-vertical-thin">Za prioritu ve městě považuji: (zaškrtněte více možností)
                     <div class="form-item">
                         <input type="checkbox" name="priorities" id="butchers">
                         <label>Řeznictví a zverimexy</label>
@@ -168,17 +184,17 @@
             <div class="message">
                 <label for="message">Co byste mi chtěli vzkázat?</label>
                 <textarea name="message" id="message" cols="60" rows="20"></textarea>
-                <input type="submit" class="button" value="Odešli">
+                <input type="submit" class="button button-primary-dark" value="Odešli">
             </div>
         </form>
     </fieldset>
     <div class="icons margin-thin padding-vertical-thin">
-        <img src="icons/bird.png" alt="pták">
-        <img src="icons/bone.png" alt="kost">
-        <img src="icons/cat.png" alt="kočka">
-        <img src="icons/fish.png" alt="rybička">
-        <img src="icons/rabbit.png" alt="králík">
-        <img src="icons/snake.png" alt="had">
+        <img class="zoom-hover-small" src="icons/bird.png" alt="pták">
+        <img class="zoom-hover-small" src="icons/bone.png" alt="kost">
+        <img class="zoom-hover-small" src="icons/cat.png" alt="kočka">
+        <img class="zoom-hover-small" src="icons/fish.png" alt="rybička">
+        <img class="zoom-hover-small" src="icons/rabbit.png" alt="králík">
+        <img class="zoom-hover-small" src="icons/snake.png" alt="had">
     </div>
 </body>
 <hr>
