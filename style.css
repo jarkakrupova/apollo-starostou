@@ -45,7 +45,7 @@ textarea {
 
 nav {
     width: 100%;
-    background-color: var(--primary-lightest);
+    background-color: var(--primary-light);
 }
 
 nav>ul {
@@ -83,6 +83,17 @@ button {
 form input[type="checkbox"],
 form input[type="radio"] {
     display: inline;
+}
+select{
+    border-color: var(--primary-darkest);
+    border-width: 0.05em;
+    background-color: var(--primary-lightest);
+        border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: var(--default-font-family);
+    font-size: 20px;
 }
 
 textarea {
