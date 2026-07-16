@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo, kandidát na starostu</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/pawprint.png" type="image/png">
 </head>
 <header>
 
@@ -14,6 +16,8 @@
 <body>
     <img class="banner" src="banner2.png" alt="volební banner">
     <nav class="nav-sticky-top padding-vertical-medium padding-horizontal-thin">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776; menu</label>
         <ul class="border-bottom-thin border-primary-dark">
             <li><a href="#about">O mně</a></li>
             <li><a href="#program">Volební program</a></li>
@@ -24,10 +28,12 @@
     <h1>Apollo</h1>
     <div class="flex-row">
         <div class="margin-right-thin">
-            <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na starostu našeho města v
-                komunálních volbách ve dnech 9. - 10. října 2026. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda nechávat ležet ladem. V případě svého zvolení slibuji, že se to u nás začne hýbat.</p>
-                <div class="flex-row">
-                    <div id="signature">
+            <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na starostu našeho města
+                v
+                komunálních volbách ve dnech 9. - 10. října 2026. Jsem přesvědčen, že naše město má obrovský potenciál,
+                který je škoda nechávat ležet ladem. V případě svého zvolení slibuji, že se to u nás začne hýbat.</p>
+            <div class="flex-row">
+                <div id="signature">
                     <p class="margin-top-none">Budu velmi potěšen, pokud mi dáte svůj hlas.</p>
                     <p>Packu na to!</p>
                     <p>Váš</p>
@@ -65,9 +71,9 @@
             <li>Osévání trávníků rostlinami vhodnými pro domácí mazlíčky</li>
         </ol>
     </div>
-    
-    <h2>Konzultační hodiny</h2>
+
     <div id="consultation">
+        <h2>Konzultační hodiny</h2>
         <div id="table-consultation">
             <table class="margin-top-thin table-striped-primary">
                 <tr>
@@ -100,18 +106,19 @@
                     <td>18:45-19:00</td>
                     <td>louka u transformátoru</td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>Sobota</td>
                     <td>8:00-8:15</td>
                     <td>park u zámku</td>
                 </tr>
-                                <tr>
+                <tr>
                     <td>Neděle</td>
                     <td>17:00-17:15</td>
                     <td>park u kulturního domu</td>
                 </tr>
             </table>
-            <fieldset id="consultation-reservation" class="margin-vertical-thin border-primary-dark corners-rounded  border-none">
+            <fieldset id="consultation-reservation"
+                class="margin-vertical-thin border-primary-dark corners-rounded  border-none">
                 <legend>Rezervace konzultace</legend>
                 <form action="" method="post">
                     <div class="form-item margin-vertical-thin">
