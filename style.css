@@ -5,13 +5,13 @@
     --primary: var(--camel);
     --primary-dark: var(--olive-wood);
     --primary-darkest: var(--dark-khaki);
-    --soft-linen:#F2EDE3;
-    --pale-oak:#D8C8AC;
+    --soft-linen: #F2EDE3;
+    --pale-oak: #D8C8AC;
     --camel: #B2945B;
     --olive-wood: #7D663B;
-    --dark-khaki:#453921;
+    --dark-khaki: #453921;
     --cream: #eaf4b9;
-    
+
     /* tloušťky paddingu a marginu */
     --padding-margin-thin: 0.5em;
     --padding-margin-medium: 1em;
@@ -39,9 +39,11 @@ textarea {
     font-size: 20px;
     font-family: var(--default-font-family);
 }
+
 ::selection {
-    color: var(--primary-lightest); 
-    background-color: var(--primary-dark);}
+    color: var(--primary-lightest);
+    background-color: var(--primary-dark);
+}
 
 nav {
     width: 100%;
@@ -52,6 +54,7 @@ nav>ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -84,11 +87,12 @@ form input[type="checkbox"],
 form input[type="radio"] {
     display: inline;
 }
-select{
+
+select {
     border-color: var(--primary-darkest);
     border-width: 0.05em;
     background-color: var(--primary-lightest);
-        border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -136,12 +140,9 @@ h2 {
 }
 
 #apollo {
-    display: flex;
     margin-top: 5%;
     min-width: 200px;
     width: 100%;
-    justify-content: end;
-    flex-direction: row;
 }
 
 .banner {
@@ -169,9 +170,20 @@ h2 {
     justify-content: space-between;
 }
 
+
+#table-consultation {
+    min-width: 200px;
+        display: flex;
+    flex-direction: row;
+}
+
+#consultation-reservation {
+    min-width: 200px;
+}
+
 /* budouci framework */
-input[type="checkbox"]:checked{
-background-color: var(--primary-light);
+input[type="checkbox"]:checked {
+    background-color: var(--primary-light);
 }
 
 .form-item {
@@ -206,6 +218,7 @@ background-color: var(--primary-light);
     background-color: var(--primary-darkest);
     color: var(--primary-lightest);
 }
+
 .button-primary-dark {
     background-color: var(--primary-dark);
     color: var(--primary-lightest);
@@ -309,14 +322,20 @@ background-color: var(--primary-light);
     padding-bottom: var(--padding-margin-thick);
 }
 
+.padding-horizontal-thin {
+    padding-left: var(--padding-margin-thin);
+    padding-right: var(--padding-margin-thin);
+}
+
 .nav-sticky-top {
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 /* tabulka s prouzky */
 
-.table-striped-primary tr:nth-child(even){
+.table-striped-primary tr:nth-child(even) {
     background-color: var(--primary-light);
 }
 
@@ -364,6 +383,7 @@ background-color: var(--primary-light);
     transform: scale(1.25, 1.25);
     transition-duration: 0.3s;
 }
+
 .zoom-hover-small:not(:hover) {
     transform: scale(1, 1);
     transition-duration: 0.3s;
@@ -373,6 +393,7 @@ background-color: var(--primary-light);
     transform: scale(1.5, 1.5);
     transition-duration: 0.3s;
 }
+
 .zoom-hover-medium:not(:hover) {
     transform: scale(1, 1);
     transition-duration: 0.3s;
@@ -382,8 +403,8 @@ background-color: var(--primary-light);
     transform: scale(2, 2);
     transition-duration: 0.3s;
 }
+
 .zoom-hover-large:not(:hover) {
     transform: scale(1, 1);
     transition-duration: 0.3s;
 }
-
