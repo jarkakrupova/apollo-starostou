@@ -76,7 +76,7 @@ th {
 }
 
 button {
-    padding: 0, 1em;
+    padding: 0 1em;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
@@ -173,8 +173,10 @@ h2 {
 
 #table-consultation {
     min-width: 200px;
-        display: flex;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
 #consultation-reservation {
@@ -182,8 +184,10 @@ h2 {
 }
 
 /* budouci framework */
-input[type="checkbox"]:checked {
-    background-color: var(--primary-light);
+
+/* sjednocení barvy zaškrtlých inputů s pozadím */
+input {
+    accent-color: var(--primary); 
 }
 
 .form-item {
@@ -196,6 +200,7 @@ input[type="checkbox"]:checked {
     flex-direction: row;
 }
 
+/* #region tlačítka */
 .button {
     padding: 0.2em 0.5em;
 }
@@ -213,6 +218,9 @@ input[type="checkbox"]:checked {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
+/* #endregion */
+
+/* #region tlačítka - barvy */
 
 .button-primary-darkest {
     background-color: var(--primary-darkest);
@@ -229,7 +237,10 @@ input[type="checkbox"]:checked {
     color: var(--primary-lightest);
 }
 
-/* buttony - animace */
+/* #endregion */
+
+
+/* #region buttony - animace */
 .button:hover {
     box-shadow: 4px 4px #1c170d;
 }
@@ -240,7 +251,7 @@ input[type="checkbox"]:checked {
 }
 
 
-/* rohy */
+/* #region rohy */
 
 .corners-rounded {
     border-bottom-left-radius: 10px;
@@ -249,7 +260,9 @@ input[type="checkbox"]:checked {
     border-top-right-radius: 10px;
 }
 
-/* margins */
+/* #endregion */
+
+/* #region margins */
 
 .margin-none {
     margin: 0em
@@ -332,6 +345,7 @@ input[type="checkbox"]:checked {
     top: 0;
     z-index: 10;
 }
+/* #endregion */
 
 /* tabulka s prouzky */
 
@@ -339,7 +353,7 @@ input[type="checkbox"]:checked {
     background-color: var(--primary-light);
 }
 
-/* okraje */
+/* #region okraje */
 
 .border-primary-darkest {
     border-color: var(--primary-darkest);
@@ -365,7 +379,10 @@ input[type="checkbox"]:checked {
     border-width: 0.15em;
 }
 
-/* sloupce  */
+/* #endregion */
+
+
+/* #region sloupce  */
 .columns-2 {
     column-count: 2;
 }
@@ -408,3 +425,18 @@ input[type="checkbox"]:checked {
     transform: scale(1, 1);
     transition-duration: 0.3s;
 }
+
+/* #endregion */
+
+/* #region media queries */
+
+@media (max-width: 900px) {
+    nav > ul {
+        flex-direction: column;   /* jen tenhle jeden řádek! */
+    }
+     .flex-row {
+        flex-direction: column;
+    }
+}
+
+/* #endregion */
