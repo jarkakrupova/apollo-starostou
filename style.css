@@ -135,8 +135,10 @@ h2 {
     flex-grow: 2;
 }
 
-.apollo {
+#apollo {
     display: flex;
+    margin-top: 5%;
+    min-width: 200px;
     width: 100%;
     justify-content: end;
     flex-direction: row;
@@ -150,13 +152,13 @@ h2 {
     display: block;
 }
 
-.pawprint {
+#pawprint {
     width: 20%;
     height: 20%;
     transform: rotate(325deg);
 }
 
-.signature {
+#signature {
     width: 65%;
 }
 
