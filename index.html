@@ -14,11 +14,11 @@
 </header>
 
 <body>
-    <img class="banner" src="banner2.png" alt="volební banner">
+    <img id="banner" src="banner2.png" alt="volební banner">
     <nav class="nav-sticky-top padding-vertical-medium padding-horizontal-thin">
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="hamburger">&#9776; menu</label>
-        <ul class="border-bottom-thin border-primary-dark">
+        <ul>
             <li><a href="#about">O mně</a></li>
             <li><a href="#program">Volební program</a></li>
             <li><a href="#consultation">Konzultační hodiny + rezervace</a></li>
@@ -118,7 +118,7 @@
                 </tr>
             </table>
             <fieldset id="consultation-reservation"
-                class="margin-vertical-thin border-primary-dark corners-rounded  border-none">
+                class="margin-vertical-thin border-primary-darkest corners-rounded  border-none">
                 <legend>Rezervace konzultace</legend>
                 <form action="" method="post">
                     <div class="form-item margin-vertical-thin">
@@ -140,7 +140,7 @@
             </fieldset>
         </div>
     </div>
-    <fieldset class="border-primary-dark corners-rounded border-thin">
+    <fieldset class="border-primary-darkest corners-rounded border-thin margin-top-medium">
         <legend>Dotazník pro návštěvníky</legend>
         <form action="" method="post">
             <div id="questionnaire">
@@ -188,14 +188,14 @@
                     </div>
                 </div>
             </div>
-            <div class="message">
+            <div id="messages">
                 <label for="message">Co byste mi chtěli vzkázat?</label>
                 <textarea name="message" id="message" cols="60" rows="20"></textarea>
                 <input type="submit" class="button button-primary-dark" value="Odešli">
             </div>
         </form>
     </fieldset>
-    <div class="icons margin-thin padding-vertical-thin">
+    <div id="icons" class="margin-thin padding-vertical-thin">
         <img class="zoom-hover-small" src="icons/bird.png" alt="pták">
         <img class="zoom-hover-small" src="icons/bone.png" alt="kost">
         <img class="zoom-hover-small" src="icons/cat.png" alt="kočka">

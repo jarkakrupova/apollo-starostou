@@ -42,6 +42,10 @@ textarea {
     font-size: 100%;
 }
 
+select {
+    justify-self: start;   /* v grid buňce: nenatahuj se, drž se vlevo */
+}
+
 ::selection {
     color: var(--primary-lightest);
     background-color: var(--primary-dark);
@@ -139,11 +143,11 @@ h2 {
     font-weight: lighter;
 }
 
-/* tridy */
-
-.intro-text {
-    flex-grow: 2;
+h3{
+    font-weight: lighter;
 }
+
+/* idecka */
 
 #apollo {
     margin-top: 5%;
@@ -151,11 +155,11 @@ h2 {
     width: 100%;
 }
 
-.banner {
+#banner {
     width: 100%;
 }
 
-.message {
+#messages {
     display: block;
 }
 
@@ -169,7 +173,7 @@ h2 {
     width: 65%;
 }
 
-.icons {
+#icons {
     display: flex;
     flex-direction: row;
     height: 50px;
@@ -336,6 +340,40 @@ input {
     margin-bottom: var(--padding-margin-thin);
 }
 
+.margin-right-medium {
+    margin-right: var(--padding-margin-medium);
+}
+
+.margin-left-medium {
+    margin-left: var(--padding-margin-medium);
+}
+
+.margin-top-medium {
+    margin-top: var(--padding-margin-medium);
+}
+
+.margin-bottom-medium {
+    margin-bottom: var(--padding-margin-medium);
+}
+
+
+.margin-right-thick {
+    margin-right: var(--padding-margin-thick);
+}
+
+.margin-left-thick {
+    margin-left: var(--padding-margin-thick);
+}
+
+.margin-top-thick {
+    margin-top: var(--padding-margin-thick);
+}
+
+.margin-bottom-thick {
+    margin-bottom: var(--padding-margin-thick);
+}
+
+
 .margin-vertical-thin {
     margin-top: var(--padding-margin-thin);
     margin-bottom: var(--padding-margin-thin);
@@ -391,18 +429,25 @@ input {
 
 .border-thin {
     border-width: var(--border-thin);
+    border-style: solid;
 }
 
 .border-bottom-thin {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     border-bottom-width: var(--border-thin);
+    border-style: solid;
 }
 
 .border-medium {
     border-width: 0.1em;
+    border-style: solid;
 }
 
 .border-thick {
     border-width: 0.15em;
+    border-style: solid;
 }
 
 /* #endregion */
