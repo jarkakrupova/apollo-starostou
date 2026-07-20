@@ -67,6 +67,7 @@ nav>ul {
 blockquote {
     font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 table {
@@ -92,6 +93,7 @@ button {
 form input[type="checkbox"],
 form input[type="radio"] {
     display: inline;
+    margin: 0em 0.25em;
 }
 
 select {
@@ -355,7 +357,6 @@ input {
 .margin-bottom-medium {
     margin-bottom: var(--padding-margin-medium);
 }
-
 
 .margin-right-thick {
     margin-right: var(--padding-margin-thick);
