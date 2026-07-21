@@ -1,16 +1,38 @@
 :root {
     /* barvy */
-    --primary-lightest: var(--soft-linen);
-    --primary-light: var(--pale-oak);
-    --primary: var(--camel);
-    --primary-dark: var(--olive-wood);
-    --primary-darkest: var(--dark-khaki);
+    --color-basic: var(--camel);
+    /* --color-lightest: var(--soft-linen);
+    --color-light: var(--pale-oak); 
+     --color-dark: var(--olive-wood);
+    --color-darkest: var(--dark-khaki); */
+    /* konkrétní pojmenované barvy z Coolors */
+    /* https://coolors.co/d0d0b3-b2945b-5b6a11-b6d369-93c48b*/
     --soft-linen: #F2EDE3;
     --pale-oak: #D8C8AC;
     --camel: #B2945B;
     --olive-wood: #7D663B;
     --dark-khaki: #453921;
     --cream: #eaf4b9;
+    --olive-leaf:#5b6a11;
+    --lime-moss:#9abe37;
+    --turquoise-surf:#28A3CC;
+    --reddish-brown:#A5402D;
+    --burgundy:#721121;
+    --princeton-orange:#FF850A;
+    --lobster-pink:#F15156;
+    --apricot-cream:#FFCF99;
+
+    --color-lightest: color-mix(in oklab, var(--color-basic), white 80%);
+    --color-light:    color-mix(in oklab, var(--color-basic), white 45%);
+    --color-dark:     color-mix(in oklab, var(--color-basic), black 30%);
+    --color-darkest:  color-mix(in oklab, var(--color-basic), black 55%);
+
+
+
+      /* sémantické barvy odvozené z camel — stejná světlost a tlumenost, jiný tón */
+    --success: oklch(from var(--color-basic) l c 145);                       /* šalvějová zelená */
+    --warning: oklch(from var(--color-basic) l calc(c * 1.5) 65);            /* jantarová */
+    --error:   oklch(from var(--color-basic) calc(l - 0.1) calc(c * 1.8) 28); /* cihlová */
 
     /* tloušťky paddingu a marginu */
     --padding-margin-thin: 0.5em;
@@ -23,12 +45,12 @@
 }
 
 /* smallest-smaller-medium-larger-largest */
-/* lightest-light-primary-dark-darkest */
+/* lightest-light-medium-dark-darkest */
 
 /* stylovani prvku */
 body {
     width: 80%;
-    background-color: var(--primary-lightest);
+    background-color: var(--color-lightest);
     margin: auto;
     font-family: var(--default-font-family);
     font-size: 20px;
@@ -47,13 +69,13 @@ select {
 }
 
 ::selection {
-    color: var(--primary-lightest);
-    background-color: var(--primary-dark);
+    color: var(--color-lightest);
+    background-color: var(--color-dark);
 }
 
 nav {
     width: 100%;
-    background-color: var(--primary-light);
+    background-color: var(--color-light);
 }
 
 nav>ul {
@@ -82,13 +104,13 @@ th {
     padding: 0.25em;
 }
 
-button {
+/* button {
     padding: 0 1em;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
-}
+} */
 
 form input[type="checkbox"],
 form input[type="radio"] {
@@ -97,9 +119,9 @@ form input[type="radio"] {
 }
 
 select {
-    border-color: var(--primary-darkest);
+    border-color: var(--color-darkest);
     border-width: 0.05em;
-    background-color: var(--primary-lightest);
+    background-color: var(--color-lightest);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 5px;
@@ -134,7 +156,7 @@ nav>ul>li>a {
     font-size: 24px;
     text-wrap: wrap;
     padding: 0.2em;
-    color: var(--primary-darkest);
+    color: var(--color-darkest);
 }
 
 h1 {
@@ -199,7 +221,7 @@ h3{
 
 /* sjednocení barvy zaškrtlých inputů se schématem */
 input {
-    accent-color: var(--primary);
+    accent-color: var(--color-basic);
 }
 
 /* desktop: hamburger a checkbox neexistují, menu je normální lišta */
@@ -251,19 +273,29 @@ input {
 
 /* #region tlačítka - barvy */
 
-.button-primary-darkest {
-    background-color: var(--primary-darkest);
-    color: var(--primary-lightest);
+.button-darkest {
+    background-color: var(--color-darkest);
+    color: var(--color-lightest);
 }
 
-.button-primary-dark {
-    background-color: var(--primary-dark);
-    color: var(--primary-lightest);
+.button-dark {
+    background-color: var(--color-dark);
+    color: var(--color-lightest);
 }
 
-.button-primary-light {
-    background-color: var(--primary-light);
-    color: var(--primary-lightest);
+.button-basic {
+    background-color: var(--color-basic);
+    color: var(--color-darkest);
+}
+
+.button-light {
+    background-color: var(--color-light);
+    color: var(--color-darkest);
+}
+
+.button-lightest {
+    background-color: var(--color-lightest);
+    color: var(--color-darkest);
 }
 
 /* #endregion */
@@ -414,14 +446,30 @@ input {
 
 /* tabulka s prouzky */
 
-.table-striped-primary tr:nth-child(even) {
-    background-color: var(--primary-light);
+.table-striped-light tr:nth-child(even) {
+    background-color: var(--color-light);
 }
 
 /* #region okraje */
 
-.border-primary-darkest {
-    border-color: var(--primary-darkest);
+.border-darkest {
+    border-color: var(--color-darkest);
+}
+
+.border-dark {
+    border-color: var(--color-dark);
+}
+
+.border-basic {
+    border-color: var(--color-basic);
+}
+
+.border-light {
+    border-color: var(--color-light);
+}
+
+.border-lightest {
+    border-color: var(--color-lightest);
 }
 
 .border-none {
@@ -516,7 +564,7 @@ input {
         display: block;            /* objeví se ☰ */
         font-size: 24px;
         cursor: pointer;
-        color: var(--primary-darkest);
+        color: var(--color-darkest);
         padding: 0.2em;
     }
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Apollo CSS framework</title>
+    <style>
+        /* Styly jen pro tuto ukázkovou stránku, nejsou součástí frameworku.
+           Rámují ukázky, aby byly vidět marginy a paddingy. */
+        .ukazka {
+            background-color: #d0d0d0;
+            margin-bottom: 0.5em;
+        }
+        .ukazka>* {
+            background-color: #ffffff;
+        }
+        .popis {
+            font-size: 0.8em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apollo CSS framework</h1>
+    <p class="popis">Každý prvek na této stránce má vždy jen jednu třídu z frameworku, aby bylo
+        vidět, co dělá právě ona. Šedé pozadí patří ukázkovému rámečku, bílé pozadí ukázanému prvku.</p>
+
+    <h2>Button</h2>
+    <p>Zakladni stylc bez formatu, jen HTML tag</p>
+    <button>Button</button>
+    <hr>
+    <p>Tridy - styly rohu</p>
+    <button class="button">button</button>
+    <button class="button-pill">button-pill</button>
+    <button class="button-sharp">button-sharp</button>
+<hr>
+<p>Barvy</p>
+ <button class="button-darkest">button-darkest</button>
+ <button class="button-dark">button-dark</button>
+  <button class="button-basic">button-basic</button>
+  <button class="button-light">button-light</button>
+  <button class="button-lightest">button-lightest</button>
+
+    <hr>
+
+    <h2>Rohy</h2>
+    <p>Zaoblení rohů libovolného prvku, nejen tlačítka.</p>
+    <button class="corners-rounded">corners-rounded</button>
+
+    <hr>
+
+    <h2>Okraje - tloušťka</h2>
+    <p>Nastavují šířku a styl čáry. Barvu nechávají na prohlížeči.</p>
+    <div class="ukazka">
+        <p class="border-thin">border-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-medium">border-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-thick">border-thick</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-bottom-thin">border-bottom-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-none">border-none</p>
+    </div>
+
+    <h2>Okraje - barva</h2>
+    <p>Nastavují jen barvu čáry. Samy o sobě nic nevykreslí - potřebují k sobě tloušťku.</p>
+    <div class="ukazka">
+        <p class="border-darkest">border-darkest</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-dark">border-dark</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-basic">border-basic</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-light">border-light</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-lightest">border-lightest</p>
+    </div>
+
+    <hr>
+
+    <h2>Marginy - všechny strany</h2>
+    <div class="ukazka">
+        <p class="margin-none">margin-none</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-thin">margin-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-medium">margin-medium</p>
+    </div>
+
+    <h2>Marginy - vodorovně a svisle</h2>
+    <div class="ukazka">
+        <p class="margin-horizontal-none">margin-horizontal-none</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-horizontal-thin">margin-horizontal-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-vertical-none">margin-vertical-none</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-vertical-thin">margin-vertical-thin</p>
+    </div>
+
+    <h2>Marginy - jednotlivé strany</h2>
+    <div class="ukazka">
+        <p class="margin-top-none">margin-top-none</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-bottom-none">margin-bottom-none</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-top-thin">margin-top-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-bottom-thin">margin-bottom-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-left-thin">margin-left-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-right-thin">margin-right-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-top-medium">margin-top-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-bottom-medium">margin-bottom-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-left-medium">margin-left-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-right-medium">margin-right-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-top-thick">margin-top-thick</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-bottom-thick">margin-bottom-thick</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-left-thick">margin-left-thick</p>
+    </div>
+    <div class="ukazka">
+        <p class="margin-right-thick">margin-right-thick</p>
+    </div>
+
+    <hr>
+
+    <h2>Paddingy</h2>
+    <div class="ukazka">
+        <p class="padding-vertical-thin">padding-vertical-thin</p>
+    </div>
+    <div class="ukazka">
+        <p class="padding-vertical-medium">padding-vertical-medium</p>
+    </div>
+    <div class="ukazka">
+        <p class="padding-vertical-thick">padding-vertical-thick</p>
+    </div>
+    <div class="ukazka">
+        <p class="padding-horizontal-thin">padding-horizontal-thin</p>
+    </div>
+
+    <hr>
+
+    <h2>Rozvržení</h2>
+    <p>flex-row srovná potomky do řady. Pod 900 px je překlopí pod sebe.</p>
+    <div class="flex-row">
+        <p>první</p>
+        <p>druhý</p>
+        <p>třetí</p>
+    </div>
+
+    <p>form-item zarovná popisek a pole do dvou sloupců. Pokud obsahuje zaškrtávátko nebo
+        přepínač, sloupce nedostane.</p>
+    <div class="form-item">
+        <label for="ukazka-jmeno">Jméno:</label>
+        <input type="text" id="ukazka-jmeno">
+    </div>
+    <div class="form-item">
+        <label for="ukazka-datum">Datum narození:</label>
+        <input type="date" id="ukazka-datum">
+    </div>
+    <div class="form-item">
+        <input type="checkbox" id="ukazka-souhlas">
+        <label for="ukazka-souhlas">Souhlasím</label>
+    </div>
+
+    <hr>
+
+    <h2>Sloupce</h2>
+    <p>Rozlévají text do novinových sloupců. Na komponenty se nehodí - ty se nezmenší.</p>
+    <div class="columns-2">
+        <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na
+            starostu města. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda
+            nechávat ležet ladem.</p>
+    </div>
+    <div class="columns-3">
+        <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na
+            starostu města. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda
+            nechávat ležet ladem.</p>
+    </div>
+    <div class="columns-4">
+        <p>Oznamuji všem páníčkům i domácím a volně žijícím zvířatům, že hodlám kandidovat na
+            starostu města. Jsem přesvědčen, že naše město má obrovský potenciál, který je škoda
+            nechávat ležet ladem.</p>
+    </div>
+
+    <hr>
+
+    <h2>Tabulka</h2>
+    <p>Podbarví každý sudý řádek.</p>
+    <table class="table-striped-light">
+        <tr>
+            <th>den</th>
+            <th>hodina</th>
+        </tr>
+        <tr>
+            <td>Pondělí</td>
+            <td>6:00-6:15</td>
+        </tr>
+        <tr>
+            <td>Úterý</td>
+            <td>6:00-6:15</td>
+        </tr>
+        <tr>
+            <td>Středa</td>
+            <td>6:00-6:15</td>
+        </tr>
+        <tr>
+            <td>Čtvrtek</td>
+            <td>16:45-17:00</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Animace</h2>
+    <p>Zvětšení při najetí myší. Najeď na tlačítko.</p>
+    <button class="zoom-hover-small">zoom-hover-small</button>
+    <button class="zoom-hover-medium">zoom-hover-medium</button>
+    <button class="zoom-hover-large">zoom-hover-large</button>
+
+    <hr>
+
+    <h2>Pozicování</h2>
+    <p>nav-sticky-top přilepí prvek k hornímu okraji okna při rolování. Zkus rolovat.</p>
+    <div class="nav-sticky-top">nav-sticky-top</div>
+
+    <hr>
+
+    <h2>Třídy bez ukázky</h2>
+    <p class="popis">hamburger - má display: none, ukáže se sama až pod 900 px v navigaci.
+        Zmenši okno prohlížeče na indexové stránce.</p>
+
+</body>
+</html>
