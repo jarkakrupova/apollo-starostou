@@ -13,26 +13,29 @@
     --olive-wood: #7D663B;
     --dark-khaki: #453921;
     --cream: #eaf4b9;
-    --olive-leaf:#5b6a11;
-    --lime-moss:#9abe37;
-    --turquoise-surf:#28A3CC;
-    --reddish-brown:#A5402D;
-    --burgundy:#721121;
-    --princeton-orange:#FF850A;
-    --lobster-pink:#F15156;
-    --apricot-cream:#FFCF99;
+    --olive-leaf: #5b6a11;
+    --lime-moss: #9abe37;
+    --turquoise-surf: #28A3CC;
+    --reddish-brown: #A5402D;
+    --burgundy: #721121;
+    --princeton-orange: #FF850A;
+    --lobster-pink: #F15156;
+    --apricot-cream: #FFCF99;
 
     --color-lightest: color-mix(in oklab, var(--color-basic), white 80%);
-    --color-light:    color-mix(in oklab, var(--color-basic), white 45%);
-    --color-dark:     color-mix(in oklab, var(--color-basic), black 30%);
-    --color-darkest:  color-mix(in oklab, var(--color-basic), black 55%);
+    --color-light: color-mix(in oklab, var(--color-basic), white 45%);
+    --color-dark: color-mix(in oklab, var(--color-basic), black 30%);
+    --color-darkest: color-mix(in oklab, var(--color-basic), black 55%);
 
 
 
-      /* sémantické barvy odvozené z camel — stejná světlost a tlumenost, jiný tón */
-    --color-success: oklch(from var(--color-basic) l c 145);                       /* šalvějová zelená */
-    --color-warning: oklch(from var(--color-basic) l calc(c * 1.5) 65);            /* jantarová */
-    --color-error:   oklch(from var(--color-basic) calc(l - 0.1) calc(c * 1.8) 28); /* cihlová */
+    /* sémantické barvy odvozené z camel — stejná světlost a tlumenost, jiný tón */
+    --color-success: oklch(from var(--color-basic) l c 145);
+    /* šalvějová zelená */
+    --color-warning: oklch(from var(--color-basic) l calc(c * 1.5) 65);
+    /* jantarová */
+    --color-error: oklch(from var(--color-basic) calc(l - 0.1) calc(c * 1.8) 28);
+    /* cihlová */
 
     /* tloušťky paddingu a marginu */
     --padding-margin-thin: 0.5em;
@@ -43,7 +46,7 @@
     /* font */
     --default-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* zaobleni rohu */
-    --radius-pill: 50rem; 
+    --radius-pill: 50rem;
 }
 
 /* smallest-smaller-medium-larger-largest */
@@ -52,7 +55,6 @@
 /* stylovani prvku */
 body {
     width: 80%;
-    background-color: var(--color-lightest);
     margin: auto;
     font-family: var(--default-font-family);
     font-size: 20px;
@@ -67,7 +69,8 @@ textarea {
 }
 
 select {
-    justify-self: start;   /* v grid buňce: nenatahuj se, drž se vlevo */
+    justify-self: start;
+    /* v grid buňce: nenatahuj se, drž se vlevo */
 }
 
 ::selection {
@@ -169,7 +172,7 @@ h2 {
     font-weight: lighter;
 }
 
-h3{
+h3 {
     font-weight: lighter;
 }
 
@@ -220,6 +223,45 @@ h3{
 }
 
 /* budouci framework */
+/* #region ID barevných čtverců s basic barvami */
+#cream {
+    background-color: var(--cream);
+}
+
+#olive-leaf {
+    background-color: var(--olive-leaf);
+}
+
+#lime-moss {
+    background-color: var(--lime-moss);
+}
+
+#turquoise-surf {
+    background-color: var(--turquoise-surf);
+}
+
+#reddish-brown {
+    background-color: var(--reddish-brown);
+}
+
+#burgundy {
+    background-color: var(--burgundy);
+}
+
+#princeton-orange {
+    background-color: var(--princeton-orange);
+}
+
+#lobster-pink {
+    background-color: var(--lobster-pink);
+}
+
+#apricot-cream {
+    background-color: var(--apricot-cream);
+}
+
+/* #endregion */
+
 
 /* sjednocení barvy zaškrtlých inputů se schématem */
 input {
@@ -235,10 +277,12 @@ input {
 .form-item {
     /* display: block;
     width: 100%; */
-     display: grid;
-    grid-template-columns: 10em 1fr;  /* sloupec labelů, sloupec inputů */
+    display: grid;
+    grid-template-columns: 10em 1fr;
+    /* sloupec labelů, sloupec inputů */
     gap: 0.5em;
-    align-items: center;              /* svisle na střed řádku */
+    align-items: center;
+    /* svisle na střed řádku */
 }
 
 /* ...ale form-item, který V SOBĚ MÁ checkbox nebo radio, grid nedostane */
@@ -252,17 +296,130 @@ input {
     flex-direction: row;
 }
 
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-between {
+    justify-content: space-between;
+}
+
+.square {
+    height: 60px;
+    width: 60px;
+}
+
+/* #region pozadí */
+.background-lightest {
+    background-color: var(--color-lightest);
+}
+
+.background-light {
+    background-color: var(--color-light);
+}
+
+.background-basic {
+    background-color: var(--color-basic);
+}
+
+.background-dark {
+    background-color: var(--color-dark);
+}
+
+.background-darkest {
+    background-color: var(--color-darkest);
+}
+
+.background-success {
+    background-color: var(--color-success);
+}
+
+.background-warning {
+    background-color: var(--color-warning);
+}
+
+.background-error {
+    background-color: var(--color-error);
+}
+
+/* #endregion */
+
+/* #region tlačítka */
+.strip-darkest {
+    background-color: var(--color-darkest);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-dark {
+    background-color: var(--color-dark);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-basic {
+    background-color: var(--color-basic);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-light {
+    background-color: var(--color-light);
+    color: var(--color-darkest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-lightest {
+    background-color: var(--color-lightest);
+    color: var(--color-darkest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-success {
+    background-color: var(--color-success);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-warning {
+    background-color: var(--color-warning);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+.strip-error {
+    background-color: var(--color-error);
+    color: var(--color-lightest);
+    width: 100%;
+    height: fit-content;
+}
+
+/* #endregion */
+
+
+
 /* #region tlačítka */
 .button {
     padding: 0.2em 0.5em;
 }
 
 .button-pill {
-border-radius: var(--radius-pill);
+    border-radius: var(--radius-pill);
 }
 
 .button-sharp {
-   border-radius: 0px;
+    border-radius: 0px;
 }
 
 /* #endregion */
@@ -336,7 +493,8 @@ border-radius: var(--radius-pill);
     line-height: 1;
     border-radius: var(--radius-pill);
     text-align: center;
-    border: 2px solid var(--color-lightest);   /*prstenec v barvě pozadí*/
+    border: 2px solid var(--color-lightest);
+    /*prstenec v barvě pozadí*/
 }
 
 .badge-darkest {
@@ -368,10 +526,12 @@ border-radius: var(--radius-pill);
     background-color: var(--color-success);
     color: var(--color-lightest);
 }
+
 .badge-warning {
     background-color: var(--color-warning);
     color: var(--color-darkest);
 }
+
 .badge-error {
     background-color: var(--color-error);
     color: var(--color-lightest);
@@ -407,6 +567,23 @@ border-radius: var(--radius-pill);
     /* žádné background-color */
 }
 
+.badge-outline-success {
+    border: var(--border-thin) solid var(--color-success);
+    color: var(--color-success);
+    /* žádné background-color */
+}
+
+.badge-outline-warning {
+    border: var(--border-thin) solid var(--color-warning);
+    color: var(--color-warning);
+    /* žádné background-color */
+}
+
+.badge-outline-error {
+    border: var(--border-thin) solid var(--color-error);
+    color: var(--color-error);
+    /* žádné background-color */
+}
 
 /* #endregion */
 
@@ -558,6 +735,20 @@ border-radius: var(--radius-pill);
     border-color: var(--color-lightest);
 }
 
+.border-success {
+    border-color: var(--color-success);
+}
+
+.border-warning {
+    border-color: var(--color-warning);
+}
+
+.border-error {
+    border-color: var(--color-error);
+}
+
+
+
 .border-none {
     border-width: 0px;
 }
@@ -640,23 +831,28 @@ border-radius: var(--radius-pill);
 
 @media (max-width: 900px) {
     nav>ul {
-        display: none;             /* menu schované... */
+        display: none;
+        /* menu schované... */
     }
 
     .flex-row {
         flex-direction: column;
     }
-.hamburger {
-        display: block;            /* objeví se ☰ */
+
+    .hamburger {
+        display: block;
+        /* objeví se ☰ */
         font-size: 24px;
         cursor: pointer;
         color: var(--color-darkest);
         padding: 0.2em;
     }
 
-       #menu-toggle:checked ~ ul {    /* ...dokud se neklikne na ☰ */
+    #menu-toggle:checked~ul {
+        /* ...dokud se neklikne na ☰ */
         display: flex;
-        flex-direction: column;    /* tvoje původní pravidlo, jen se přesune sem */
+        flex-direction: column;
+        /* tvoje původní pravidlo, jen se přesune sem */
     }
 }
 
@@ -668,8 +864,10 @@ border-radius: var(--radius-pill);
     .flex-row {
         flex-direction: column;
     }
+
     .form-item {
-        grid-template-columns: 1fr;   /* jeden sloupec = label nad inputem */
+        grid-template-columns: 1fr;
+        /* jeden sloupec = label nad inputem */
     }
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,120 @@
         /* Styly jen pro tuto ukázkovou stránku, nejsou součástí frameworku.
            Rámují ukázky, aby byly vidět marginy a paddingy. */
         .ukazka {
-            background-color: #d0d0d0;
+            background-color: #999999;
             margin-bottom: 0.5em;
         }
+
         .ukazka>* {
-            background-color: #ffffff;
+            background-color: rgb(234, 233, 233);
         }
+
         .popis {
             font-size: 0.8em;
             color: #555;
         }
+        body{
+            background-color: white;
+        }
     </style>
 </head>
+
 <body>
     <h1>Apollo CSS framework</h1>
     <p class="popis">Každý prvek na této stránce má vždy jen jednu třídu z frameworku, aby bylo
         vidět, co dělá právě ona. Šedé pozadí patří ukázkovému rámečku, bílé pozadí ukázanému prvku.</p>
+
+    <h2>Barvy</h2>
+    <p>platí pro text, pozadí, čáry,... </p>
+    <p>Barvy se počítají od basic + success, warning, error pro zobrazení hlášení</p>
+    <div class="flex-row flex-evenly">
+        <div>
+            <div class="square background-lightest"></div>
+            <p>-lightest</p>
+        </div>
+        <div>
+            <div class="square background-light"></div>
+            <p>-light</p>
+        </div>
+        <div>
+            <div class="square background-basic"></div>
+            <p>-basic</p>
+        </div>
+        <div>
+            <div class="square background-dark"></div>
+            <p>-dark</p>
+        </div>
+        <div>
+            <div class="square background-darkest"></div>
+            <p>-darkest</p>
+        </div>
+        <div>
+            <div class="square background-success"></div>
+            <p>-success</p>
+        </div>
+        <div>
+            <div class="square background-warning"></div>
+            <p>-warning</p>
+        </div>
+        <div>
+            <div class="square background-error"></div>
+            <p>-error</p>
+        </div>
+    </div>
+
+    <p>Basic barvy obsažené v CSS (pro použití pro změnu barevného schématu):</p>
+    <div class="flex-row flex-wrap flex-between">
+        <div>
+            <div id="cream" class="square"></div>
+            <p>cream</p>
+        </div>
+        <div>
+            <div id="olive-leaf" class="square"></div>
+            <p>olive-leaf</p>
+        </div>
+        <div>
+            <div id="lime-moss" class="square"></div>
+            <p>lime-moss</p>
+        </div>
+        <div>
+            <div id="turquoise-surf" class="square"></div>
+            <p>turquoise-surf</p>
+        </div>
+        <div>
+            <div id="reddish-brown" class="square"></div>
+            <p>reddish-brown</p>
+        </div>
+        <div>
+            <div id="burgundy" class="square"></div>
+            <p>burgundy</p>
+        </div>
+        <div>
+            <div id="princeton-orange" class="square"></div>
+            <p>princeton-orange</p>
+        </div>
+        <div>
+            <div id="lobster-pink" class="square"></div>
+            <p>lobster-pink</p>
+        </div>
+        <div>
+            <div id="apricot-cream" class="square"></div>
+            <p>apricot-cream</p>
+        </div>
+    </div>
+    <div>
+        <h2>Strip (komponenta)</h2>
+        <p>Proužek pro zobrazení informace ap. na celou šířku stránky</p>
+        <div class="strip-lightest">strip-lightest</div>
+        <div class="strip-light">strip-light</div>
+        <div class="strip-basic">strip-basic</div>
+        <div class="strip-dark">strip-dark</div>
+        <div class="strip-darkest">strip-darkest</div>
+
+        <div class="strip-success">strip-success</div>
+        <div class="strip-warning">strip-warning</div>
+        <div class="strip-error">strip-error</div>
+
+    </div>
 
     <h2>Button</h2>
     <p>Zakladni styl bez formatu, jen HTML tag</p>
@@ -34,25 +133,26 @@
     <button class="button">button</button>
     <button class="button-pill">button-pill</button>
     <button class="button-sharp">button-sharp</button>
-<hr>
-<p>Barvy</p>
- <button class="button-darkest">button-darkest</button>
- <button class="button-dark">button-dark</button>
-  <button class="button-basic">button-basic</button>
-  <button class="button-light">button-light</button>
-  <button class="button-lightest">button-lightest</button>
+    <hr>
+    <p>Barvy</p>
+    <button class="button-darkest">button-darkest</button>
+    <button class="button-dark">button-dark</button>
+    <button class="button-basic">button-basic</button>
+    <button class="button-light">button-light</button>
+    <button class="button-lightest">button-lightest</button>
 
     <hr>
 
     <h2>Rohy</h2>
     <p>Zaoblení rohů libovolného prvku, nejen tlačítka.</p>
     <button class="corners-rounded">corners-rounded</button>
-        <button class="corners-sharp">corners-sharp</button>
+    <button class="corners-sharp">corners-sharp</button>
 
     <hr>
 
     <h2>Badge</h2>
-    <p>Určeny pro krátké texty - 1-2 znaky</p>
+    <p>Určeny pro krátké texty - 1-2 znaky. Základní stylování zařídí třída badge, pak se volí podle konkrétního stylu.
+    </p>
     <span class="badge badge-darkest">1</span>
     <span class="badge badge-dark">2</span>
     <span class="badge badge-basic">3</span>
@@ -67,6 +167,9 @@
     <span class="badge badge-success">S</span>
     <span class="badge badge-warning">W</span>
     <span class="badge badge-error">E</span>
+    <span class="badge badge-outline-success">S</span>
+    <span class="badge badge-outline-warning">W</span>
+    <span class="badge badge-outline-error">E</span>
 
 
     <h2>Okraje - tloušťka</h2>
@@ -103,6 +206,15 @@
     </div>
     <div class="ukazka">
         <p class="border-lightest">border-lightest</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-success">border-success</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-warning">border-warning</p>
+    </div>
+    <div class="ukazka">
+        <p class="border-lightest">border-error</p>
     </div>
 
     <hr>
@@ -285,4 +397,5 @@
         Zmenši okno prohlížeče na indexové stránce.</p>
 
 </body>
+
 </html>
