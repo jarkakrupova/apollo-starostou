@@ -42,6 +42,8 @@
     --border-thin: 0.05em;
     /* font */
     --default-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* zaobleni rohu */
+    --radius-pill: 50rem; 
 }
 
 /* smallest-smaller-medium-larger-largest */
@@ -256,17 +258,11 @@ input {
 }
 
 .button-pill {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+border-radius: var(--radius-pill);
 }
 
 .button-sharp {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+   border-radius: 0px;
 }
 
 /* #endregion */
@@ -328,57 +324,90 @@ input {
 
 /* #region badges*/
 
-.badge-lightest{
-    border-color: var(--color-lightest);
-    border-width: var(--border-thin);
-    border-style: solid;
-    border-radius: 50%;
-    background-color: var(--color-lightest);
-    padding: 1%;
+/* #region badge */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.6em;
+    height: 1.6em;
+    box-sizing: border-box;
+    padding: 0 0.4em;
+    line-height: 1;
+    border-radius: var(--radius-pill);
+    text-align: center;
+    border: 2px solid var(--color-lightest);   /*prstenec v barvě pozadí*/
+}
+
+.badge-darkest {
+    background-color: var(--color-darkest);
     color: var(--color-lightest);
 }
 
-
-.badge-dark{
-    border-color: var(--color-dark);
-    border-width: var(--border-thin);
-    border-style: solid;
-    border-radius: 50%;
+.badge-dark {
     background-color: var(--color-dark);
-    padding: 5px;
-    font-size: 15px;
     color: var(--color-lightest);
 }
 
-.badge-success{
-    border-color: var(--color-success);
-    border-width: var(--border-thin);
-    border-style: solid;
-    border-radius: 50%;
+.badge-basic {
+    background-color: var(--color-basic);
+    color: var(--color-lightest);
+}
+
+.badge-light {
+    background-color: var(--color-light);
+    color: var(--color-darkest);
+}
+
+.badge-lightest {
+    background-color: var(--color-lightest);
+    color: var(--color-darkest);
+}
+
+.badge-success {
     background-color: var(--color-success);
-    padding: 1%;
     color: var(--color-lightest);
 }
-
-.badge-warning{
-    border-color: var(--color-warning);
-    border-width: var(--border-thin);
-    border-style: solid;
-    border-radius: 50%;
+.badge-warning {
     background-color: var(--color-warning);
-    padding: 1%;
+    color: var(--color-darkest);
+}
+.badge-error {
+    background-color: var(--color-error);
     color: var(--color-lightest);
 }
 
-.badge-error{
-    border-color: var(--color-error);
-    border-width: var(--border-thin);
-    border-style: solid;
-    border-radius: 50%;
-    background-color: var(--color-error);
-    padding: 1%;
-    color: var(--color-lightest);
+.badge-outline-darkest {
+    border: var(--border-thin) solid var(--color-darkest);
+    color: var(--color-darkest);
+    /* žádné background-color */
 }
+
+.badge-outline-dark {
+    border: var(--border-thin) solid var(--color-dark);
+    color: var(--color-dark);
+    /* žádné background-color */
+}
+
+.badge-outline-basic {
+    border: var(--border-thin) solid var(--color-basic);
+    color: var(--color-basic);
+    /* žádné background-color */
+}
+
+.badge-outline-light {
+    border: var(--border-thin) solid var(--color-light);
+    color: var(--color-light);
+    /* žádné background-color */
+}
+
+.badge-outline-lightest {
+    border: var(--border-thin) solid var(--color-lightest);
+    color: var(--color-lightest);
+    /* žádné background-color */
+}
+
+
 /* #endregion */
 
 
