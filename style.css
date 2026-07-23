@@ -30,9 +30,9 @@
 
 
       /* sémantické barvy odvozené z camel — stejná světlost a tlumenost, jiný tón */
-    --success: oklch(from var(--color-basic) l c 145);                       /* šalvějová zelená */
-    --warning: oklch(from var(--color-basic) l calc(c * 1.5) 65);            /* jantarová */
-    --error:   oklch(from var(--color-basic) calc(l - 0.1) calc(c * 1.8) 28); /* cihlová */
+    --color-success: oklch(from var(--color-basic) l c 145);                       /* šalvějová zelená */
+    --color-warning: oklch(from var(--color-basic) l calc(c * 1.5) 65);            /* jantarová */
+    --color-error:   oklch(from var(--color-basic) calc(l - 0.1) calc(c * 1.8) 28); /* cihlová */
 
     /* tloušťky paddingu a marginu */
     --padding-margin-thin: 0.5em;
@@ -326,45 +326,61 @@ input {
 
 /* #endregion */
 
+/* #region badges*/
+
+.badge-lightest{
+    border-color: var(--color-lightest);
+    border-width: var(--border-thin);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: var(--color-lightest);
+    padding: 1%;
+    color: var(--color-lightest);
+}
+
+
 .badge-dark{
     border-color: var(--color-dark);
     border-width: var(--border-thin);
     border-style: solid;
     border-radius: 50%;
     background-color: var(--color-dark);
-    padding: 1%;
+    padding: 5px;
+    font-size: 15px;
     color: var(--color-lightest);
 }
 
 .badge-success{
-    border-color: var(--color-dark);
+    border-color: var(--color-success);
     border-width: var(--border-thin);
     border-style: solid;
     border-radius: 50%;
-    background-color: var(--success);
+    background-color: var(--color-success);
     padding: 1%;
     color: var(--color-lightest);
 }
 
 .badge-warning{
-    border-color: var(--color-dark);
+    border-color: var(--color-warning);
     border-width: var(--border-thin);
     border-style: solid;
     border-radius: 50%;
-    background-color: var(--warning);
+    background-color: var(--color-warning);
     padding: 1%;
     color: var(--color-lightest);
 }
 
 .badge-error{
-    border-color: var(--color-dark);
+    border-color: var(--color-error);
     border-width: var(--border-thin);
     border-style: solid;
     border-radius: 50%;
-    background-color: var(--error);
+    background-color: var(--color-error);
     padding: 1%;
     color: var(--color-lightest);
 }
+/* #endregion */
+
 
 /* #region margins */
 
