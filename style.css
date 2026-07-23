@@ -317,13 +317,54 @@ input {
 /* #region rohy */
 
 .corners-rounded {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px;
+}
+
+.corners-sharp {
+    border-radius: 0px;
 }
 
 /* #endregion */
+
+.badge-dark{
+    border-color: var(--color-dark);
+    border-width: var(--border-thin);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    padding: 1%;
+    color: var(--color-lightest);
+}
+
+.badge-success{
+    border-color: var(--color-dark);
+    border-width: var(--border-thin);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: var(--success);
+    padding: 1%;
+    color: var(--color-lightest);
+}
+
+.badge-warning{
+    border-color: var(--color-dark);
+    border-width: var(--border-thin);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: var(--warning);
+    padding: 1%;
+    color: var(--color-lightest);
+}
+
+.badge-error{
+    border-color: var(--color-dark);
+    border-width: var(--border-thin);
+    border-style: solid;
+    border-radius: 50%;
+    background-color: var(--error);
+    padding: 1%;
+    color: var(--color-lightest);
+}
 
 /* #region margins */
 
