@@ -21,6 +21,7 @@
     --princeton-orange: #FF850A;
     --lobster-pink: #F15156;
     --apricot-cream: #FFCF99;
+    --bright-teal-blue:#0077B6;
 
     --color-lightest: color-mix(in oklab, var(--color-basic), white 80%);
     --color-light: color-mix(in oklab, var(--color-basic), white 45%);
@@ -224,6 +225,10 @@ h3 {
 
 /* budouci framework */
 /* #region ID barevných čtverců s basic barvami */
+
+#camel {
+    background-color: var(--camel);
+}
 #cream {
     background-color: var(--cream);
 }
@@ -238,6 +243,10 @@ h3 {
 
 #turquoise-surf {
     background-color: var(--turquoise-surf);
+}
+
+#bright-teal-blue{
+    background-color: var(--bright-teal-blue);
 }
 
 #reddish-brown {
@@ -311,7 +320,41 @@ input {
 .square {
     height: 60px;
     width: 60px;
+    object-fit: cover;   /* obrázek vyplní čtverec ořezem, ne deformací (na divy bez vlivu) */
 }
+
+/* #region swatches (vzorník barev - pravidelná mřížka) */
+.swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 90px);  /* stejně široké buňky, samy se zalomí */
+    gap: var(--padding-margin-medium);               /* zaručeně stejné mezery */
+    justify-content: start;
+}
+
+/* každá dlaždice: čtverec a popisek vycentrované pod sebou */
+.swatches>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--padding-margin-thin);
+}
+
+.swatches p {
+    text-align: center;
+    margin: 0;
+}
+/* #endregion */
+/* #region mezery ve flexu/gridu */
+.gap-thin {
+    gap: var(--padding-margin-thin);
+}
+.gap-medium {
+    gap: var(--padding-margin-medium);
+}
+.gap-thick {
+    gap: var(--padding-margin-thick);
+}
+/* #endregion */
 
 /* #region pozadí */
 .background-lightest {
@@ -826,6 +869,68 @@ input {
 }
 
 /* #endregion */
+
+/* #region carousel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;        /* plynulé rolování při kliku na tečku */
+    max-width: 700px;
+    margin-inline: auto;            /* vycentrovat na stránce */
+    border-radius: 12px;            /* zaoblené rohy komponenty */
+}
+
+.carousel > img {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;       /* nepřeskočit fotku při rychlém swipu */
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4 / 3;           /* výška podle šířky, ne pevných 600px */    
+    /* aspect-ratio: 16 / 9;         /*   výška podle šířky, ne pevných 600px */  
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.carousel-dots a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+.carousel-dots a:hover {
+    color: var(--color-dark);
+}
+/* #endregion */
+
+
+/* #region masky na obrázky */
+
+/* ostrý kulatý ořez */
+.mask-circle {
+    border-radius: 50%;
+}
+
+/* kolečko s rozmazanými okraji - fotka se vytrácí do průhledna.
+   55 % = ostré jádro, 72 % = úplná průhlednost; mezera = šířka rozmytí */
+.mask-circle-soft {
+    -webkit-mask-image: radial-gradient(circle, black 55%, transparent 72%);
+    mask-image: radial-gradient(circle, black 55%, transparent 72%);
+}
+
+/* čtvercová fotka, jen jemně mizí do stránky na všech stranách */
+.mask-fade {
+    -webkit-mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
+    mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
+}
+/* #endregion */
+
 
 /* #region media queries */
 

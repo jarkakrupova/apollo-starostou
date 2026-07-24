@@ -22,7 +22,22 @@
             font-size: 0.8em;
             color: #555;
         }
-        body{
+
+        /* jen pro ukázku masek - větší fotky, ať vynikne rozmytí */
+        .mask-demo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            text-align: center;
+        }
+
+        .mask-demo img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        body {
             background-color: white;
         }
     </style>
@@ -36,7 +51,7 @@
     <h2>Barvy</h2>
     <p>platí pro text, pozadí, čáry,... </p>
     <p>Barvy se počítají od basic + success, warning, error pro zobrazení hlášení</p>
-    <div class="flex-row flex-evenly">
+    <div class="swatches">
         <div>
             <div class="square background-lightest"></div>
             <p>-lightest</p>
@@ -72,30 +87,30 @@
     </div>
 
     <p>Basic barvy obsažené v CSS (pro použití pro změnu barevného schématu):</p>
-    <div class="flex-row flex-wrap flex-between">
+    <div class="swatches">
         <div>
             <div id="cream" class="square"></div>
             <p>cream</p>
         </div>
         <div>
-            <div id="olive-leaf" class="square"></div>
-            <p>olive-leaf</p>
+            <div id="apricot-cream" class="square"></div>
+            <p>apricot-cream</p>
         </div>
         <div>
             <div id="lime-moss" class="square"></div>
             <p>lime-moss</p>
         </div>
         <div>
+            <div id="olive-leaf" class="square"></div>
+            <p>olive-leaf</p>
+        </div>
+        <div>
             <div id="turquoise-surf" class="square"></div>
             <p>turquoise-surf</p>
         </div>
         <div>
-            <div id="reddish-brown" class="square"></div>
-            <p>reddish-brown</p>
-        </div>
-        <div>
-            <div id="burgundy" class="square"></div>
-            <p>burgundy</p>
+            <div id="bright-teal-blue" class="square"></div>
+            <p>bright-teal-blue</p>
         </div>
         <div>
             <div id="princeton-orange" class="square"></div>
@@ -106,8 +121,16 @@
             <p>lobster-pink</p>
         </div>
         <div>
-            <div id="apricot-cream" class="square"></div>
-            <p>apricot-cream</p>
+            <div id="reddish-brown" class="square"></div>
+            <p>reddish-brown</p>
+        </div>
+        <div>
+            <div id="burgundy" class="square"></div>
+            <p>burgundy</p>
+        </div>
+        <div>
+            <div id="camel" class="square"></div>
+            <p>camel</p>
         </div>
     </div>
     <div>
@@ -150,7 +173,7 @@
 
     <hr>
 
-    <h2>Badge</h2>
+    <h2>Badge (komponenta)</h2>
     <p>Určeny pro krátké texty - 1-4 znaky. Základní stylování zařídí třída badge, pak se volí podle konkrétního stylu.
     </p>
     <span class="badge badge-darkest">1</span>
@@ -174,6 +197,7 @@
     <span class="badge badge-darkest">10</span>
     <span class="badge badge-darkest">100</span>
     <span class="badge badge-darkest">1000</span>
+    <span class="badge badge-darkest">ABCD</span>
 
 
 
@@ -394,6 +418,40 @@
     <h2>Pozicování</h2>
     <p>nav-sticky-top přilepí prvek k hornímu okraji okna při rolování. Zkus rolovat.</p>
     <div class="nav-sticky-top">nav-sticky-top</div>
+
+    <hr>
+
+    <h2>Carousel</h2>
+<div class="carousel">
+    <img id="slide-1" src="apollo.JPEG" alt="Apollo">
+    <img id="slide-2" src="kocka.jpg" alt="kočka">
+    <img id="slide-3" src="banner2.png" alt="banner">
+</div>
+<div class="carousel-dots">
+    <a href="#slide-1">●</a>
+    <a href="#slide-2">●</a>
+    <a href="#slide-3">●</a>
+</div>
+
+    <hr>
+
+    <h2>Masky na obrázky</h2>
+    <p>mask-circle ořízne fotku do ostrého kolečka, mask-circle-soft do kolečka s rozmazanými
+        okraji (fotka se vytrácí do stránky). mask-fade jen jemně změkčí okraje čtvercové fotky.</p>
+    <div class="mask-demo">
+        <div>
+            <img class="mask-circle" src="apollo.JPEG" alt="Apollo, ostrý ořez">
+            <p>mask-circle</p>
+        </div>
+        <div>
+            <img class="mask-circle-soft" src="apollo.JPEG" alt="Apollo, měkký okraj">
+            <p>mask-circle-soft</p>
+        </div>
+        <div>
+            <img class="mask-fade" src="kocka.jpg" alt="kočka, jemné okraje">
+            <p>mask-fade</p>
+        </div>
+    </div>
 
     <hr>
 
