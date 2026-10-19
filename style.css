@@ -21,7 +21,7 @@
     --princeton-orange: #FF850A;
     --lobster-pink: #F15156;
     --apricot-cream: #FFCF99;
-    --bright-teal-blue:#0077B6;
+    --bright-teal-blue: #0077B6;
 
     --color-lightest: color-mix(in oklab, var(--color-basic), white 80%);
     --color-light: color-mix(in oklab, var(--color-basic), white 45%);
@@ -50,6 +50,7 @@
     --radius-pill: 50rem;
 }
 
+/* škály: */
 /* smallest-smaller-medium-larger-largest */
 /* lightest-light-medium-dark-darkest */
 
@@ -177,10 +178,24 @@ h3 {
     font-weight: lighter;
 }
 
+hr {
+    border: none;
+    border-top: 1px solid #333333;
+    color: #333333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
 /* idecka */
 
 #apollo {
     margin-top: 5%;
+    min-width: 200px;
+    width: 100%;
+}
+
+#pstarosta {
     min-width: 200px;
     width: 100%;
 }
@@ -223,12 +238,22 @@ h3 {
     min-width: 200px;
 }
 
+#older-news::after {
+    background-color: var(--color-lightest);
+    content: "Starší novinky";
+    padding: 0 8px;
+    position: relative;
+    text-align: center;
+    top: -14px;
+}
+
 /* budouci framework */
 /* #region ID barevných čtverců s basic barvami */
 
 #camel {
     background-color: var(--camel);
 }
+
 #cream {
     background-color: var(--cream);
 }
@@ -245,7 +270,7 @@ h3 {
     background-color: var(--turquoise-surf);
 }
 
-#bright-teal-blue{
+#bright-teal-blue {
     background-color: var(--bright-teal-blue);
 }
 
@@ -320,14 +345,17 @@ input {
 .square {
     height: 60px;
     width: 60px;
-    object-fit: cover;   /* obrázek vyplní čtverec ořezem, ne deformací (na divy bez vlivu) */
+    object-fit: cover;
+    /* obrázek vyplní čtverec ořezem, ne deformací (na divy bez vlivu) */
 }
 
 /* #region swatches (vzorník barev - pravidelná mřížka) */
 .swatches {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 90px);  /* stejně široké buňky, samy se zalomí */
-    gap: var(--padding-margin-medium);               /* zaručeně stejné mezery */
+    grid-template-columns: repeat(auto-fill, 90px);
+    /* stejně široké buňky, samy se zalomí */
+    gap: var(--padding-margin-medium);
+    /* zaručeně stejné mezery */
     justify-content: start;
 }
 
@@ -343,17 +371,25 @@ input {
     text-align: center;
     margin: 0;
 }
+
 /* #endregion */
 /* #region mezery ve flexu/gridu */
 .gap-thin {
     gap: var(--padding-margin-thin);
 }
+
 .gap-medium {
     gap: var(--padding-margin-medium);
 }
+
 .gap-thick {
     gap: var(--padding-margin-thick);
 }
+
+/* #endregion */
+
+/* #region fonty */
+
 /* #endregion */
 
 /* #region pozadí */
@@ -875,20 +911,25 @@ input {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;        /* plynulé rolování při kliku na tečku */
+    scroll-behavior: smooth;
+    /* plynulé rolování při kliku na tečku */
     max-width: 700px;
-    margin-inline: auto;            /* vycentrovat na stránce */
-    border-radius: 12px;            /* zaoblené rohy komponenty */
+    margin-inline: auto;
+    /* vycentrovat na stránce */
+    border-radius: 12px;
+    /* zaoblené rohy komponenty */
 }
 
-.carousel > img {
+.carousel>img {
     flex: 0 0 100%;
     scroll-snap-align: center;
-    scroll-snap-stop: always;       /* nepřeskočit fotku při rychlém swipu */
+    scroll-snap-stop: always;
+    /* nepřeskočit fotku při rychlém swipu */
     object-fit: cover;
     width: 100%;
-    aspect-ratio: 4 / 3;           /* výška podle šířky, ne pevných 600px */    
-    /* aspect-ratio: 16 / 9;         /*   výška podle šířky, ne pevných 600px */  
+    aspect-ratio: 4 / 3;
+    /* výška podle šířky, ne pevných 600px */
+    /* aspect-ratio: 16 / 9;         /*   výška podle šířky, ne pevných 600px */
 }
 
 .carousel-dots {
@@ -907,6 +948,7 @@ input {
 .carousel-dots a:hover {
     color: var(--color-dark);
 }
+
 /* #endregion */
 
 
@@ -929,6 +971,7 @@ input {
     -webkit-mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
     mask-image: radial-gradient(ellipse, black 60%, transparent 100%);
 }
+
 /* #endregion */
 
 
